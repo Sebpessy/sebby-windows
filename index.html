@@ -1185,7 +1185,9 @@ if (reduceMotion) {
 }
 
 /* ---------- quote form ---------- */
-const API = 'https://api.sebbywindows.com';
+/* Railway service. api.sebbywindows.com is bound to the same service; swap the
+   constant once that CNAME resolves. On failure the form falls back to mailto. */
+const API = 'https://api-production-ae9e.up.railway.app';
 const qform = document.getElementById('qform'),
       qmsg  = document.getElementById('qmsg'),
       qsubmit = document.getElementById('qsubmit');
