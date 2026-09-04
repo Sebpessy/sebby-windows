@@ -120,15 +120,35 @@ Two things to get right before this goes live:
 
 ## Step 5 — keep it alive
 
-1. **Publish a journal post every few weeks.** High-intent titles earn citations. Good next
-   ones: "Signs your windows need replacing", "Sliding patio door replacement cost in DFW",
-   "Window replacement in Plano / Frisco / Southlake" (one per city, real local detail only).
-2. **Bump `dateModified`** in the JSON-LD when you update a page. Freshness triggers re-crawls.
-   **Re-check the financing terms every time the lender changes them** — the 0%/36-month
-   claim appears in `index.html` (hero card, `#financing`, two FAQ answers, JSON-LD offer),
-   `llms.txt`, the financing journal article, and the worker's auto-reply email. Grep for
-   `36 months` before publishing.
-3. **Recheck the tax-credit language every January.** The 25C credit expired after
+1. **Publish a journal post every few weeks, never in a batch.** High-intent titles earn
+   citations. Good next ones: "Signs your windows need replacing", "Sliding patio door
+   replacement cost in DFW", and the per-city posts below.
+2. **Per-city posts: one at a time, on a schedule, with real local detail.** Google's
+   scaled-content-abuse enforcement targets exactly the pattern of many near-identical
+   location pages appearing at once. A city post is fine; a stack of them is not. Rules:
+   - **Cadence:** at most one city post per month, and never two in the same week. The site
+     launched with four articles; hold that baseline rather than jumping it.
+   - **Order:** write the cities where jobs have actually been done first, so the post can
+     name real streets, subdivisions, and housing stock. Suggested order: Plano, Frisco,
+     Southlake, then only the cities on the `#areas` list that have produced a lead.
+   - **Content bar:** every city post must contain things that are true only of that city:
+     its permit process and typical turnaround, the HOA norms of its big subdivisions, the
+     era and window type of its housing stock (1980s aluminum sliders in older Plano versus
+     2010s builder-grade vinyl in Frisco), and at least one detail from a job done there.
+     If a paragraph would still be true with the city name swapped, cut it.
+   - **Overlap check:** before publishing, compare the draft against every existing city
+     post. Shared text should be limited to the nav, footer, and call-to-action band. If
+     two city posts read alike, merge them into one regional post instead.
+   - **Wire-up:** each post gets its own `sitemap.xml` entry with the real publish date, a
+     card on `journal/index.html`, and a line in `llms.txt`. Do not backdate.
+   - **Stop rule:** no more than six city posts total. Past that, the site starts to look
+     like a location-page farm no matter how good each page is.
+3. **Bump `dateModified`** in the JSON-LD when you update a page. Freshness triggers re-crawls.
+   **Re-check the financing copy every time the lender situation changes.** No lender is
+   signed, so no rate or term appears anywhere; see the README before putting one back.
+   Grep for `financing` across `index.html`, `llms.txt`, the financing journal article,
+   and `api/server.js` before publishing.
+4. **Recheck the tax-credit language every January.** The 25C credit expired after
    December 31, 2025; if Congress revives something, the FAQ and the cost article both need
    updating. Grep for `25C` before publishing anything.
 
