@@ -3,7 +3,21 @@
 Working copy. **Canonical source is `~/sebby-windows-site`** (same pattern as
 sebby.homes → `~/sebby-homes-site`). Edit there, commit, push, then rsync here.
 
-Static single-page site, no build step. Dark palette matching sebby.homes.
+Static single-page site, no build step. Built on the shared Sebby template: same CSS,
+nav, hero, section and form patterns as sebbypools.com and sebby.homes. The `<style>` block
+starts with the template copied from sebbypools.com, followed by Windows-only overrides.
+
+## Brand assets
+
+- `assets/logo.png`: the Sebby Windows crest (shield, arched window, "Sebby" script,
+  WINDOWS caps), cut out of `Six9/Sebby/Marketing/bizz card v2/sebby_windows_shield.png`.
+  Transparent master saved next to it as `sebby_windows_crest_transparent.png`.
+- `assets/wordmark.jpg`: the Sebby Homes wordmark with HOME BUILDER replaced by the
+  WINDOWS lettering lifted from the crest. Master saved as `sebby_windows_wordmark.jpg`.
+- `assets/og.jpg`: crest over the hero photo, 1200x630 link preview.
+- `assets/photos/`: stills from Sebby Homes projects (Kenwell, Edgefield). No window
+  replacement job photos exist yet; the page says so under the gallery. The house number
+  is masked on `hero-dusk.jpg`.
 
 ## Where it lives
 
@@ -61,7 +75,9 @@ deferred interest. It stands on its own with no lender signed.
 2. **Resend:** create an API key, verify sebbywindows.com as a sending domain,
    then `cd api && railway variables --service api --set "RESEND_API_KEY=..."`.
    Until then leads land in Supabase silently and no email goes out.
-3. **`seb@sebbywindows.com`** mailbox or alias must exist — it is on the site and
+3. **Email:** the site uses `seb@sebby.homes` (same as Sebby Pools). sebbywindows.com has
+   no MX record, so a `seb@sebbywindows.com` address would bounce. Switch back only after a
+   mailbox exists; it is on the site and
    is the form's mailto fallback.
 4. Confirm the warranty language matches what you stand behind.
 5. Decide which suppliers to name publicly — the site names none yet.

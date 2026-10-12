@@ -44,7 +44,7 @@ answers about "window replacement near me" lean heavily on this data.
 3. **Primary category: Window installation service.** Secondary: Contractor, Window supplier,
    Door supplier. The primary category is the single highest-leverage field on the profile.
 4. Exact **NAP**, matching the site character for character:
-   `Sebby Windows` · `469-996-3789` · `seb@sebbywindows.com` · `https://sebbywindows.com`
+   `Sebby Windows` · `469-996-3789` · `seb@sebby.homes` · `https://sebbywindows.com`
 5. Turn on **call history** and **messaging** so calls from the profile are tracked.
 6. Add 10+ photos of real installs, plus the logo. Photos drive profile engagement, which
    drives ranking.
